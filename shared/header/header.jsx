@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 
-const Header = () => {
+export const Header = () => {
     const Header = styled.header `
         heigth: 100px;
         background: red;
@@ -19,5 +19,3 @@ const Header = () => {
         </Header>
     );
 };
-
-export default Header;
