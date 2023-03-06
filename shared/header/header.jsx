@@ -9,7 +9,9 @@ export const Header = () => {
         background: red;
         position: sticky;
         top: 0;
+        height: 60px;
         width: 100vw;
+
     `;
     return (
         <Header>
