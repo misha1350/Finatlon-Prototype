@@ -1,5 +1,5 @@
 import React from 'react';
-import Example from '../compoents/examle/example';
+import Example from '../components/examle/example';
 import { PageTemplate } from '../widgets/pageTemplate/PageTemplate';
 
 const index = () => {
