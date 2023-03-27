@@ -15,22 +15,7 @@ dnf module list nodejs
 dnf module install nodejs:16 -y
 # Install nginx
 echo -e "${YELLOW}Происходит установка nginx${NC}"
-#rpm -i http://nginx.org/packages/mainline/centos/8/x86_64/RPMS/nginx-1.23.3-1.el8.ngx.x86_64.rpm
-
-# # Update npm
-# npm install -g npm@latest
-
-# # Configure nginx repository
-# tee /etc/yum.repos.d/nginx.repo > /dev/null <<EOF
-# [nginx-mainline]
-# name=nginx mainline repo
-# baseurl=http://nginx.org/packages/mainline/centos/$releasever/$basearch/
-# gpgcheck=1
-# enabled=1
-# gpgkey=https://nginx.org/keys/nginx_signing.key
-# module_hotfixes=true
-# # hello
-# EOF
+rpm -i http://nginx.org/packages/mainline/centos/8/x86_64/RPMS/nginx-1.23.3-1.el8.ngx.x86_64.rpm
 
 # Configuring Nginx
 # Create a directory if it does not exist (sometimes it isn't automatically created)
@@ -167,13 +152,3 @@ nginx -t
 systemctl restart nginx
 
 echo "${GREEN}Теперь запустите npm run dev и проверьте работу${NC}"
-
-# # Install Yarn
-# npm install -g yarn
-
-# # Install dependencies
-# cd <project-directory>
-# yarn install
-
-# # Build the NextJS web application
-# yarn build
