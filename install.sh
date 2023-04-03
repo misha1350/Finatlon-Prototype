@@ -5,7 +5,7 @@ $NC='\e[0m' # No Colour
 
 # Clone the git repository
 echo -e "${YELLOW}Cloning 'Finatlon-Prototype' repository${NC}"
-git clone https://github.com/Finatlon/Finatlon-Prototype
+git clone https://github.com/misha1350/Finatlon-Prototype
 
 # Install necessary packages on CentOS 8
 dnf upgrade -y
@@ -151,4 +151,6 @@ ln -s /etc/nginx/sites-available/Finatlon /etc/nginx/sites-enabled/
 nginx -t
 systemctl restart nginx
 
-echo "${GREEN}Теперь запустите npm run dev и проверьте работу${NC}"
+echo "${GREEN} Запускаем npm run dev и проверьте работу${NC}"
+
+npm run dev

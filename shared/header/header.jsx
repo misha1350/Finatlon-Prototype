@@ -16,7 +16,7 @@ export const Header = () => {
     return (
         <Header>
             <Container>
-                <Link href="/"><img src="" alt="Финатлон" /></Link>
+                <Link href="/"><img src="https://img2.goodfon.ru/original/320x240/6/2a/kotyata-malyshi-parochka-6325.jpg" alt="Финатлон" /></Link>
             </Container>
         </Header>
     );
