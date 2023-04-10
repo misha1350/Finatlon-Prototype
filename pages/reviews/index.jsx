@@ -1,4 +1,4 @@
-import { TextRotationAngleupSharp } from "@mui/icons-material";
+// import { TextRotationAngleupSharp } from "@mui/icons-material";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import {
@@ -39,9 +39,6 @@ const Review = () => {
         return (<ItemReview {...card} />) 
       })}
 
-      {/* <ItemReview /> */}
-      {/* <ItemReview /> */}
-      {/* <ItemReview /> */}
        <AppPagination setCards={(p)=>setCards(p)} />  
       {/* <Box display="flex" alignItems="center" justifyContent="center"> */}
         {/* <Pagination count="10" */}
