@@ -1,4 +1,6 @@
 import { TextRotationAngleupSharp } from "@mui/icons-material";
+import { useState } from "react";
+import { useRouter } from "next/router";
 import {
   createTheme,
   Typography,
@@ -11,8 +13,17 @@ import { Container } from "@mui/system";
 import ItemReview from "../../widgets/itemReview/card";
 import CustomSeparator from "../../widgets/itemReview/Breadcrumb";
 import MultilineTextFields from "../../widgets/itemReview/text-field";
+import MyComponent from "../../widgets/itemReview/pagination/index";
+import AppPagination from "../../widgets/itemReview/pagination/index";
 const Review = () => {
+  const[cards, setCards] = useState([]);
+  
+  
   return (
+
+ 
+
+
     <Container>
       <CustomSeparator />
       <Typography
@@ -24,16 +35,32 @@ const Review = () => {
       >
         Отзывы
       </Typography>
-      <ItemReview />
-      <ItemReview />
-      <ItemReview />
-      <Box display="flex" alignItems="center" justifyContent="center">
-        <Pagination count={10} size="large" color="primary" />
-      </Box>
-      <Box display="flex" alignItems="center" justifyContent="center">
-        {" "}
+      {cards.map((card) => {
+        return (<ItemReview {...card} />) 
+      })}
+
+      {/* <ItemReview /> */}
+      {/* <ItemReview /> */}
+      {/* <ItemReview /> */}
+       <AppPagination setCards={(p)=>setCards(p)} />  
+      {/* <Box display="flex" alignItems="center" justifyContent="center"> */}
+        {/* <Pagination count="10" */}
+        {/* variant='outlined' */}
+        {/* color='primary' */}
+        {/* className='pagination' */}
+       {/* size="large"  /> */}
+      {/* </Box> */}
+      {/* <Box display="flex" alignItems="center" justifyContent="center"> */}
+        {/* {" "} */}
         <MultilineTextFields />{" "}
-      </Box>
+      {/* </Box> */}
+      {/* {cards.map((card) => {
+        console.log(card.name)
+      })} */}
+
+
+
+
     </Container>
   );
 };
