@@ -13,21 +13,24 @@ import {
   IconButton,
   Typography,
 } from "@mui/material";
+import { cards } from "../../pages/reviews/services/cards";
 
-const ItemReview = () => {
+const ItemReview = (props) => {
+  console.log(props)
   return (
     <Card sx={{ margin: 5 }}>
       <CardHeader
         avatar={<Avatar sx={{ bgcolor: "grey" }} aria-label="recipe"></Avatar>}
-        title="Эльвира"
-        subheader="20.01.2017"
+        title={props.name}
+        subheader={props.data}
       />
       <CardMedia component="img" height="20%" />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
-          Спасибо организатору и руководителям за такую замечательную олимпиаду!
+          {props.review}
+          {/* Спасибо организатору и руководителям за такую замечательную олимпиаду!
           Мне было интересно поучаствовать. Я думаю, что олимпиада будет еще
-          набирать популярность среди учеников 9-11 классов...
+          набирать популярность среди учеников 9-11 классов... */}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
